@@ -2,12 +2,12 @@
 #include <DHT.h>
 #include <ESP8266WiFi.h>
 
-String apiKey = "0PL7AFG5PNAUSDWM";//TS channel
+String apiKey = "0PL7AFG5PNAUSDWM";//Thingspeak API
 const char* ssid = "WiFimodem-7E70";
 const char* password = "etm4mgmwaz";
 const char* server = "api.thingspeak.com";
  
-#define DHTPIN 2 //Connected to Data pin D4
+#define DHTPIN 2   //Connected to Data pin D4 Of Nodemcu
 #define DHTTYPE DHT22 
  
 DHT dht(DHTPIN, DHTTYPE);
@@ -52,9 +52,9 @@ return;
 if (client.connect(server,80)) {//api.thingspeak.com
 String postStr = apiKey;
 postStr +="&field1=";
-postStr += String(t);//field 1 is displaying graph of Temperature values 
+postStr += String(t);//field 1 is displaying graph of Temperature values in Thingspeak
 postStr +="&field2=";
-postStr += String(h);//field 2 is displayig graph of Humidity Values
+postStr += String(h);//field 2 is displayig graph of Humidity Values in Thingspeak
 postStr += "\r\n\r\n";
  
 client.print("POST /update HTTP/1.1\n");
