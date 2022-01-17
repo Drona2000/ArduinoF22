@@ -1,4 +1,4 @@
-# ArduinoF22
+# ArduinoF22 IoT for Optimal Sleeping Environment
 The purpose of this project is to create a device/program which measures the
 room environment and gives feedback based on the observations.
 Experts recommend a specific environment in a room for a individual to get opti-
