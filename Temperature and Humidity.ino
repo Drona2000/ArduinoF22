@@ -1,3 +1,4 @@
+//https://how2electronics.com/dht11-humidity-temperature-nodemcu-thingspeak/
 #include <DHT.h>
 #include <ESP8266WiFi.h>
 
